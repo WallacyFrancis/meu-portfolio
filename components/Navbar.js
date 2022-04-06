@@ -10,7 +10,7 @@ function Navbar() {
         <div className="w-full">
           <div className="flex items-center h-20 w-full">
             <div className="flex items-center sm:mx-10 md:mx-20 justify-between w-full">
-              <div className="flex justify-center items-center flex-shrink-0">
+              <div className="flex justify-center items-center flex-shrink-0 ml-10">
                 <h1 className="font-bold text-xl cursor-pointer">
                   Wallacy <span className="text-blue-600">Francis</span>
                 </h1>
@@ -123,9 +123,9 @@ function Navbar() {
         <Transition 
           show={isOpen} 
           enter="transition ease-out duration-100 transform" 
-          enterFrom="opacity-0 sacale-95" 
+          enterFrom="opacity-0 scale-95" 
           enterTo="opacity-100 scale-100" 
-          leave="transition ease-in suration-75 transform" 
+          leave="transition ease-in duration-75 transform"
           leaveFrom="opacity-100 scale-100" 
           leaveTo="opacity-0 scale-95"
         >
@@ -188,15 +188,26 @@ function Navbar() {
                   Projetos
                 </Link>
                 <Link
-                  href="/s"
-                  activeClass="home"
-                  to="home"
+                  href="/contact"
+                  activeClass="contact"
+                  to="contact"
                   smooth={true}
                   offset={50}
                   duration={500}
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Contato
+                </Link>
+                <Link
+                  href="/hi"
+                  activeClass="hi"
+                  to="hi"
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Diga <span className="text-black ">oi!</span>
                 </Link>
               </div>
             </div>
